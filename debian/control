@@ -1,0 +1,21 @@
+Source: linux-rockchip-5.10.160
+Section: kernel
+Priority: optional
+Maintainer: Joshua Riek <jjriek@verizon.net>
+Standards-Version: 4.6.0
+Build-Depends: bc, rsync, kmod, cpio, build-essential, u-boot-tools, bison, python3 | python, python-is-python3 | python-is-python2, flex | flex:native , , libssl-dev:native
+Vcs-Git: https://github.com/Joshua-Riek/linux-rockchip.git
+
+Package: linux-image-5.10.160-rockchip
+Architecture: arm64
+Description: Linux kernel, version 5.10.160
+ This package contains the Linux kernel, modules and corresponding other
+ files, version: 5.10.160.
+
+Package: linux-headers-5.10.160-rockchip
+Architecture: arm64
+Description: Linux kernel headers for 5.10.160 on arm64
+ This package provides kernel header files for 5.10.160 on arm64
+ .
+ This is useful for people who need to build external modules
+
