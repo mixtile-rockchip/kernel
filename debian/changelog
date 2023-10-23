@@ -1,3 +1,15 @@
+linux-rockchip-5.10.160 (5.10.160-16) jammy; urgency=medium
+
+  * arm64: dts: turing-rk1: enable hdmi0 sound
+  * video: rockchip: rga3: fix compatibility with legacy global alpha config
+  * arm64: dts: rockchip: rk3568: remove opp-supported-hw from gpu_opp_table
+  * arm64: dts: turing-rk1: device tree cleanup and use correct stdout-path
+  * arm64: dts: mekotronics: enable avsd; add missing sound-dai-cells to v12's hdmirx_ctrler
+  * Add several overlays for YY3568
+  * arm64: dts: Add support for YY3568
+
+ -- Joshua Riek <jjriek@verizon.net>  Mon, 23 Oct 2023 17:48:33 -0400
+
 linux-rockchip-5.10.160 (5.10.160-15) jammy; urgency=medium
 
   * arm64: dts: turing-rk1: add overlay to enable sata2 on pcie2x1l1
