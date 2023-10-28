@@ -1,3 +1,15 @@
+linux-rockchip-5.10 (5.10.160-17) jammy; urgency=medium
+
+  * drivers: bluetooth: add support for RTL8852BE
+  * arm64: dts: delete duplicate gpio-leds nodes
+  * arm64: dts: cm5 io: modify vcc5v0_host gpio
+  * arm64: dts: cm5 io: add dp sound
+  * arm64: dts: move status led configuration to radxa cm5
+  * arm64: dts: turing-rk1: configure extcon attribute
+  * arm64: dts: rk3588-armsom-w3.dts detele chosen
+
+ -- Joshua Riek <jjriek@verizon.net>  Sat, 28 Oct 2023 07:15:14 -0400
+
 linux-rockchip-5.10.160 (5.10.160-16) jammy; urgency=medium
 
   * arm64: dts: turing-rk1: enable hdmi0 sound

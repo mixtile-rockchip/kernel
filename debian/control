@@ -1,4 +1,4 @@
-Source: linux-rockchip-5.10.160
+Source: linux-rockchip-5.10
 Section: kernel
 Priority: optional
 Maintainer: Joshua Riek <jjriek@verizon.net>
@@ -8,14 +8,18 @@ Vcs-Git: https://github.com/Joshua-Riek/linux-rockchip.git
 
 Package: linux-image-5.10.160-rockchip
 Architecture: arm64
-Description: Linux kernel, version 5.10.160
- This package contains the Linux kernel, modules and corresponding other
- files, version: 5.10.160.
+Description: Linux kernel image for version 5.10.160 on arm64
+ This package contains the Linux kernel image for version 5.10.160 arm64.
+ .
+ You likely do not want to install this package directly. Instead, install
+ the linux-rockchip-5.10 meta-package, which will ensure that upgrades work
+ correctly, and that supporting packages are also installed.
 
 Package: linux-headers-5.10.160-rockchip
 Architecture: arm64
-Description: Linux kernel headers for 5.10.160 on arm64
- This package provides kernel header files for 5.10.160 on arm64
+Description: Linux kernel headers for version 5.10.160 on arm64
+ This package contains the Linux kernel headers for version 5.10.160 arm64.
  .
- This is useful for people who need to build external modules
-
+ You likely do not want to install this package directly. Instead, install
+ the linux-rockchip-5.10 meta-package, which will ensure that upgrades work
+ correctly, and that supporting packages are also installed.
