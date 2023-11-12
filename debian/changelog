@@ -1,3 +1,10 @@
+linux-rockchip-5.10 (5.10.160-20) jammy; urgency=medium
+
+  * arm64: dts: turing-rk1: enable reserved memory for cma
+  * arm64: dts: turing-rk1: add usb pinctrl and missing regulators 
+
+ -- Joshua Riek <jjriek@verizon.net>  Sun, 12 Nov 2023 09:52:27 -0500
+
 linux-rockchip-5.10 (5.10.160-19) jammy; urgency=medium
 
   * video: rockchip: rga3: fix 4:2:2 10-bit reading in rga2
