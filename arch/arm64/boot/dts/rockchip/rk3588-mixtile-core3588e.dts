@@ -19,7 +19,7 @@
 #include "rk3588-rk806-single.dtsi"
 #include "rk3588-linux.dtsi"
 
-
+#include "rk3588-mixtile-core3588e-imx219.dtsi"
 
 / {
 	model = "Mixtile Core 3588E";
@@ -169,7 +169,6 @@
 
 	vcc_3v3_sd_s0: vcc-3v3-sd-s0-regulator {
 		compatible = "regulator-fixed";
-		//gpio = <&gpio0 RK_PB7 GPIO_ACTIVE_HIGH>;
 		pinctrl-names = "default";
 		pinctrl-0 = <&sd_s0_pwr>;
 		regulator-name = "vcc_3v3_sd_s0";
@@ -601,6 +600,23 @@
 	status = "okay";
 };
 
+&usbdp_phy0 {
+	status = "okay";
+};
+
+&usbdp_phy0_u3 {
+	status = "okay";
+};
+
+&usbdrd3_0 {
+	status = "okay";
+};
+
+&usbdrd_dwc3_0 {
+	extcon = <&u2phy0>;
+	status = "okay";
+};
+
 &vdpu {
 	status = "okay";
 };
@@ -712,8 +728,6 @@
 	pinctrl-names = "default";
         pinctrl-0 = <&hdmim0_tx0_cec &hdmim1_tx0_hpd &hdmim0_tx0_scl &hdmim0_tx0_sda>;
 	enable-gpios = <&gpio0 RK_PC4 GPIO_ACTIVE_HIGH>;
-        //pinctrl-0 = <&hdmi0_hpd>;
-	//hpd-gpios = <&gpio3 RK_PD4 GPIO_ACTIVE_HIGH>;
 	status = "okay";
 };
 
@@ -945,12 +959,12 @@
 	
 };
 
-&pcie2x1l0 { // combphy1, to ASM1182e
+&pcie2x1l0 { 
 	reset-gpios = <&gpio1 RK_PB4 GPIO_ACTIVE_HIGH>;
 	status = "okay";
 };
 
-&pcie2x1l1 { // combphy2, to miniPCIe socket
+&pcie2x1l1 {
 	reset-gpios = <&gpio4 RK_PA2 GPIO_ACTIVE_HIGH>;
 	status = "okay";
 };
@@ -1127,3 +1141,5 @@
                 /* GPIO4_D4-D7 */
                 "", "", "", "";
 };
+
+
