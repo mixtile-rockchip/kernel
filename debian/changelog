@@ -1,3 +1,10 @@
+linux-rockchip-5.10 (5.10.160-21) jammy; urgency=medium
+
+  * arm64: dts: turing-rk1: pull down emmc_data_strobe to fix HS400
+  * Revert "arm64: dts: turing-rk1: use HS200 mode for eMMC" 
+
+ -- Joshua Riek <jjriek@verizon.net>  Thu, 16 Nov 2023 08:36:01 -0500
+
 linux-rockchip-5.10 (5.10.160-20) jammy; urgency=medium
 
   * arm64: dts: turing-rk1: enable reserved memory for cma
