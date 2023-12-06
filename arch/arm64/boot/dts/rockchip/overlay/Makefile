@@ -38,6 +38,7 @@ dtbo-$(CONFIG_ARCH_ROCKCHIP) += \
 	radxa-cm5-io-sata.dtbo \
 	turing-rk1-sata2.dtbo \
 	mixtile-blade3-sata2.dtbo \
+	mixtile-core3588e-40pins.dtbo \
 	yy3568-camera.dtbo \
 	yy3568-display-dsi0.dtbo \
 	yy3568-display-dsi1.dtbo \
