@@ -665,6 +665,12 @@
 	status = "okay";
 };
 
+&uart1 {
+	status = "okay";
+	pinctrl-names = "default";
+	pinctrl-0 = <&uart1m1_xfer &uart1m1_ctsn &uart1m1_rtsn>;
+};
+
 &uart7 {
 	status = "okay";
 	pinctrl-names = "default";
@@ -759,10 +765,57 @@
 	};
 };
 
+&i2c5 {
+	status = "okay";
+	pinctrl-names = "default";
+	pinctrl-0 = <&i2c5m2_xfer>;
+};
+
 &pwm2 { 
 	pinctrl-names = "active";
 	pinctrl-0 = <&pwm2m1_pins>;
 	status = "okay";
+};
+
+&can1 {
+	status = "okay";
+	pinctrl-names = "default";
+	pinctrl-0 = <&can1m1_pins>;
+};
+
+&spi0 {
+	status = "okay";
+	pinctrl-names = "default";
+	pinctrl-0 = <&spi0m3_cs1 &spi0m3_pins>;
+	num-cs = <1>;
+	
+	spi_dev@0 {
+	        compatible = "rockchip,spidev";
+	        reg = <0>;
+	        spi-max-frequency = <50000000>;
+	};
+};
+
+&spi1 {
+	status = "okay";
+	pinctrl-names = "default";
+	pinctrl-0 = <&spi1m2_cs0 &spi1m2_pins>;
+	num-cs = <1>;
+	
+	spi_dev@0 {
+	        compatible = "rockchip,spidev";
+	        reg = <0>;
+	        spi-max-frequency = <50000000>;
+	};
+};
+
+&i2s0_8ch {
+	status = "okay";
+	pinctrl-names = "default";
+	pinctrl-0 = <&i2s0_lrck
+	             &i2s0_sclk
+	             &i2s0_sdi0
+	             &i2s0_sdo0>;
 };
 
 &i2s5_8ch {
