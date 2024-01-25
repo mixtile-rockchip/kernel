@@ -4276,6 +4276,7 @@ static int vop2_clk_set_parent_extend(struct vop2_video_port *vp,
 			}
 		}
 	} else {
+		vop2_clk_set_parent(vp->dclk, vp->dclk_parent);
 		if (hdmi0_phy_pll && (BIT(vp->id) & hdmi0_phy_pll->vp_mask))
 			hdmi0_phy_pll->vp_mask &= ~BIT(vp->id);
 
