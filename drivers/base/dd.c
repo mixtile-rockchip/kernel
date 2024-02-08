@@ -335,7 +335,7 @@ static int deferred_probe_initcall(void)
 	}
 	return 0;
 }
-late_initcall(deferred_probe_initcall);
+__define_initcall(deferred_probe_initcall, 3);
 
 static void __exit deferred_probe_exit(void)
 {

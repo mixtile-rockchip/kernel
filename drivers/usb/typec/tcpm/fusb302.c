@@ -1868,7 +1868,18 @@ static struct i2c_driver fusb302_driver = {
 	.remove = fusb302_remove,
 	.id_table = fusb302_i2c_device_id,
 };
-module_i2c_driver(fusb302_driver);
+
+static int __init fusb302_driver_init(void)
+{
+    return i2c_add_driver(&(fusb302_driver));
+}
+__define_initcall(fusb302_driver_init, 3);
+
+static void __exit fusb302_driver_exit(void)
+{
+	i2c_del_driver(&(fusb302_driver));
+}
+module_exit(fusb302_driver_exit);
 
 MODULE_AUTHOR("Yueyao Zhu <yueyao.zhu@gmail.com>");
 MODULE_DESCRIPTION("Fairchild FUSB302 Type-C Chip Driver");

@@ -934,7 +934,18 @@ static struct i2c_driver tcpci_i2c_driver = {
 	.remove = tcpci_remove,
 	.id_table = tcpci_id,
 };
-module_i2c_driver(tcpci_i2c_driver);
+
+static int __init tcpci_i2c_driver_init(void)
+{
+    return i2c_add_driver(&(tcpci_i2c_driver));
+}
+__define_initcall(tcpci_i2c_driver_init, 3);
+
+static void __exit tcpci_i2c_driver_exit(void)
+{
+	i2c_del_driver(&(tcpci_i2c_driver));
+}
+module_exit(tcpci_i2c_driver_exit);
 
 MODULE_DESCRIPTION("USB Type-C Port Controller Interface driver");
 MODULE_LICENSE("GPL");
